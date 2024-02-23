@@ -35,7 +35,7 @@ Users should be able to:
 
 - Desktop dialog
 
-![Screen Shot 2566-11-29 at 21 11 56](https://github.com/Wannika123/fem-ecommerce-page/assets/142564014/6829b294-53b0-4605-a8ff-36d89e773388)
+![Screen Shot 2567-02-23 at 11 12 04](https://github.com/Wannika123/fem-ecommerce-page/assets/142564014/89c08680-e596-4e71-86ca-e78c20f91ea3)
 
 - Mobile version
 
@@ -44,7 +44,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/Wannika123/fem-ecommerce-page)
-- Live Site URL: [GitHub page](https://your-live-site-url.com)
+- Live Site URL: [GitHub page](https://wannika123.github.io/fem-ecommerce-page/)
 
 ## My process
 
