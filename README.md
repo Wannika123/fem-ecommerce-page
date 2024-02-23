@@ -58,7 +58,7 @@ Users should be able to:
 
 **Note: I wrote this mainly just for myself, to make what I learn less overwhelming. It might be incoherent and not organized. Feel free to read though.**
 
-- By default, absolute-positioned element won't be on top of <img>. But it can be adjusted to be on top with no problem.
+- By default, absolute-positioned element won't be on top of 'img'. But it can be adjusted to be on top with no problem.
 
 ```
 * {
@@ -69,6 +69,12 @@ Users should be able to:
 - The above code must not include dialog, as that will delete dialog's awesome default style.
 - The order of SCSS file you imported is important. For example, if the above code is the last imported, it will override everything.
 - Any element can't be on top of dialog's backdrop, no matter how high you set the 'z-index'.
+- (JS) Somehow, there's a problem setting the background image by 
+```
+element.style.backgroundImage = 'url(...)'
+```
+You must use .getComputedStyle to get the right value.
+
 
 ### Useful resources
 
