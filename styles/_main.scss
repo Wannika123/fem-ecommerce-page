@@ -1,0 +1,189 @@
+@import "colors";
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 70px;
+    section {
+        padding: 0 4em;
+    }
+    #img-section {
+        .large-img {
+            object-fit: contain;
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            &:first-of-type:hover {
+                cursor: pointer;
+            }
+        }
+        .thumbnail {
+            display: flex;
+            justify-content: space-between;
+            &-img {
+                position: relative;
+                overflow: hidden;
+                width: 22%;  
+                border-radius: 15px;
+                .screen {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background-color: white;
+                    opacity: 0;     /* when active, use 0.6 */
+                    z-index: 3;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .prev, .next {
+                display: none;
+            }
+        }
+    }
+    #text-section {
+        padding-top: 60px;
+        .intro {
+            text-transform: uppercase;
+            color: $Orange;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        h1 {
+            font-size: 2.75rem;
+            margin: 20px 0;
+            color: $Very-dark-blue;
+            line-height: 1.1;
+        }
+        p {
+            padding: 1rem 0;
+            color: $Dark-grayish-blue;
+        }
+        .price {
+            margin: 1rem 0;
+            .discounted-price, .percent, .full-price {
+                font-weight: 700;
+            }
+            .discounted-price {
+                display: inline-block;
+                color: $Very-dark-blue;
+                font-size: 1.75rem;
+                margin-right: 0.75rem;
+            }
+            .percent {
+                color: $Orange;
+                padding: 2px 7px;
+                background-color: $Pale-orange;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+            .full-price {
+                text-decoration: line-through;
+                color: $Grayish-blue;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+            }           
+        }
+        .last-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0;
+            .amount {
+                width: 35%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $Light-grayish-blue;
+                padding: 0 20px 0 20px;
+                border-radius: 10px;
+                #minus {
+                    transform: translateY(-3px);
+                }
+                #curr-amount {
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    color: $Very-dark-blue;
+                }
+            }
+            #add-cart-btn {
+                width: 60%;
+                height: 3.5rem;
+                box-shadow: 0 20px 20px hsl(26, 80%, 88%);
+                svg {   
+                    margin-right: 0.75rem;
+                }
+            }            
+        }
+    }
+}
+
+@media (max-width: 41rem) {
+    main {
+        grid-template-columns: unset;
+        margin-top: 0;
+        padding: 0;
+        section {
+            padding: 0;
+        }
+        #img-section {
+            width: 100%;
+            .large-img {
+                display: none;
+            }
+            .thumbnail {
+                display: block;
+                width: 100%;
+                height: 320px;
+                overflow: hidden;
+                position: relative;
+                &-img {
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    border-radius: unset;
+                    visibility: hidden;
+                    img {
+                        visibility: inherit;
+                        object-fit: cover;
+                        margin-top: -10px;
+                    }
+                }
+                .prev, .next {
+                    display: block;
+                    position: absolute;
+                    z-index: 4;
+                    top: 45%;
+                }
+                .next {
+                    right: 0;
+                }
+            }
+        }
+        #text-section {
+            padding: 40px 16px 0 16px;
+            h1 {
+                font-size: 2rem;
+            }
+            .price {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .last-line {
+                display: unset;
+                width: 100%;
+                .amount {
+                    width: 100%;
+                    height: 3rem;
+                }
+                #add-cart-btn {
+                    width: 100%;
+                    height: 3rem;
+                    margin-top: 0.75rem;
+                }
+            }
+        }
+    }
+}

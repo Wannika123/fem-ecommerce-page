@@ -1,0 +1,15 @@
+@import "colors";
+@import "header";
+@import "buttons";
+@import "main";
+@import "dialog";
+
+footer {
+    margin-top: auto;
+}
+
+@media (max-width: 41rem) {
+    footer {
+        margin-top: 3rem;
+    }
+}
